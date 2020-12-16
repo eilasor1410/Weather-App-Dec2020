@@ -1,0 +1,75 @@
+body {
+  max-width: 90%;
+  margin: 5%;
+  padding-left: 50px;
+  background-image: url(https://images.pexels.com/photos/601798/pexels-photo-601798.jpeg?cs=srgb&dl=pexels-neosiam-601798.jpg&fm=jpg);
+  font-family: "Montserrat", sans-serif;
+}
+
+#forecast i {
+  font-size: 30px;
+}
+
+p {
+  color: #fff;
+}
+
+.row p {
+  font-size: 15px;
+}
+
+#forecast {
+  margin-top: 100px;
+  max-width: 100%;
+  background-color: rgba(112, 171, 173, 0.2);
+  padding: 20px 0;
+}
+
+.pwh {
+  display: block;
+  font-size: 40px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+}
+
+input {
+  width: 80%;
+}
+
+#search-button {
+  background-color: darkblue;
+  color: #fff;
+  border-radius: 5px;
+  width: 10%;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 100px;
+  display: inline;
+}
+
+.current-icon {
+  font-size: 80px;
+  text-align: center;
+  display: inline;
+}
+
+#current-temp h3 {
+  font-size: 100px;
+  display: inline;
+}
+
+#temp-convert {
+  margin-left: 150px;
+}
