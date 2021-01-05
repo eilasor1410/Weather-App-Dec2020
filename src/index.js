@@ -26,6 +26,20 @@ function displayWeather(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].main);
+  celsiusTemp = response.data.main.temp;
+}
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#current-temp");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function showCelsius(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#current-temp");
+  tempElement.innerHTML = Math.round(celsiusTemp);
 }
 
 function formatDate(timestamp) {
@@ -51,5 +65,13 @@ function formatDate(timestamp) {
   return `Last updated ${day}・ ${hours}:${minutes}`;
 }
 
+let celsiusTemp = null;
+
 let searchCity = document.querySelector("#search-city");
 searchCity.addEventListener("submit", currentCity);
+
+let convertFahrenheit = document.querySelector("#fahrenheit");
+convertFahrenheit.addEventListener("click", showFahrenheit);
+
+let convertCelsius = document.querySelector("#celsius");
+convertCelsius.addEventListener("click", showCelsius);
