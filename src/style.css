@@ -30,7 +30,6 @@ p {
   font-size: 40px;
 }
 
-h1,
 h2,
 h3,
 h4,
@@ -41,6 +40,12 @@ h6 {
 
 input {
   width: 80%;
+}
+
+#celsius,
+#fahrenheit {
+  color: #fff;
+  font-size: 10px;
 }
 
 #search-button {
@@ -59,10 +64,11 @@ h3 {
   display: inline;
 }
 
-.current-icon {
-  font-size: 80px;
+#current-icon {
+  font-size: 20px;
   text-align: center;
   display: inline;
+  color: #fff;
 }
 
 #current-temp h3 {

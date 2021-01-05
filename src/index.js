@@ -1,40 +1,3 @@
-let now = new Date();
-
-let currentDateTime = document.querySelector("#current-date-time");
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-let date = now.getDate();
-let hour = now.getHours();
-let minutes = now.getMinutes();
-//let year = now.getFullYear();
-let month = months[now.getMonth()];
-let day = days[now.getDay()];
-
-currentDateTime.innerHTML = `${day} ${date} ${month} ・ ${hour}:${minutes}`;
-
 function currentCity(event) {
   event.preventDefault();
   let apiKey = "00f5b26afcbaa563aa89ecdc5d2dba0e";
@@ -54,6 +17,32 @@ function displayWeather(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  document.querySelector("#current-date").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
+}
+
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `Last updated ${day}・ ${hours}:${minutes}`;
 }
 
 let searchCity = document.querySelector("#search-city");
