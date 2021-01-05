@@ -6,23 +6,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-#forecast i {
-  font-size: 30px;
-}
-
 p {
   color: #fff;
 }
 
 .row p {
   font-size: 15px;
-}
-
-#forecast {
-  margin-top: 100px;
-  max-width: 100%;
-  background-color: rgba(112, 171, 173, 0.2);
-  padding: 20px 0;
 }
 
 .pwh {
@@ -60,24 +49,12 @@ h2 {
 }
 
 h3 {
-  font-size: 100px;
-  display: inline;
-}
-
-#current-icon {
-  font-size: 20px;
-  text-align: center;
-  display: inline;
-  color: #fff;
-}
-
-#current-temp h3 {
-  font-size: 100px;
+  font-size: 150px;
   display: inline;
 }
 
 #temp-convert {
-  margin-left: 150px;
+  margin-left: 175px;
 }
 
 .gitHubLink {
@@ -86,4 +63,5 @@ h3 {
 
 footer {
   color: #fff;
+  margin-top: 15%;
 }
